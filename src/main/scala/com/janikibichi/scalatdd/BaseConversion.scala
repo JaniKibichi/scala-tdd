@@ -4,6 +4,13 @@ import scala.annotation.tailrec
 
 object BaseConversion{
 
+  def binaryToDecimal(binary: Binary): Decimal ={
+    val seq = binary.number.reverse.zipWithIndex.map{
+      case (a,i) => a.toString.toInt * math.pow(2,i)
+    }
+    Decimal(seq.sum.toInt.toString)
+  }
+
   def decimalToBinary(decimal:Decimal) = {
     Binary(toBinary(BigInt(decimal.number),"").toString)
   }
