@@ -1,6 +1,5 @@
 package com.janikibichi.scalatdd
 
-import org.scalatest.FlatSpec
 
 class DecimalBinarySpec extends UnitSpec {
 

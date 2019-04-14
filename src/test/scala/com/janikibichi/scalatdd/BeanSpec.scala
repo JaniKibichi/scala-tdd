@@ -23,4 +23,12 @@ class BeanSpec extends FlatSpec{
 
   }
 
+  "Hexadecimal" should "throw error when initialized with a non numeric string"in {
+
+    intercept[IllegalArgumentException]{
+      Hexadecimal("XYZ")
+    }
+
+  }
+
 }
