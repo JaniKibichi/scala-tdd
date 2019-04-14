@@ -1,8 +1,6 @@
 package com.janikibichi.scalatdd
 
-import org.scalatest.FlatSpec
-
-class BinaryToDecimalSpec extends FlatSpec{
+class BinaryToDecimalSpec extends UnitSpec {
   "base conversion utility" should "convert binary number 100100111101 to decimal number equivalent 2365" in{
     var decimal: Decimal = BaseConversion.binaryToDecimal(Binary("100100111101"))
     assert(decimal.number == "2365")
